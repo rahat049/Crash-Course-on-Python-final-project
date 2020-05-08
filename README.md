@@ -1,4 +1,4 @@
-#Crash-Course-on-Python-final-project
+# Crash-Course-on-Python-final-project
 
 We've covered a bunch of String class methods already, so let's keep building on those and run down some more advanced methods.
 The string method lower will return the string with all characters changed to lowercase. The inverse of this is the upper method, which will return the string all in uppercase. Just like with previous methods, we call these on a string using dot notation, like "this is a string".upper(). This would return the string "THIS IS A STRING". This can be super handy when checking user input, since someone might type in all lowercase, all uppercase, or even a mixture of cases.
@@ -11,15 +11,16 @@ The inverse of the join method is the split method. This allows us to split a 
 
 
 
-String Reference Cheat Sheet
+# String Reference Cheat Sheet
+
 In Python, there are a lot of things you can do with strings. In this cheat sheet, you’ll find the most common string operations and string methods.
-String operations
+# String operations
     • len(string) Returns the length of the string
     • for character in string Iterates over each character in the string
     • if substring in string Checks whether the substring is part of the string
     • string[i] Accesses the character at index i of the string, starting at zero
     • string[i:j] Accesses the substring starting at index i, ending at index j-1. If i is omitted, it's 0 by default. If j is omitted, it's len(string) by default.
-String methods
+# String methods
     • string.lower() / string.upper() Returns a copy of the string with all lower / upper case characters
     • string.lstrip() / string.rstrip() / string.strip() Returns a copy of the string without left / right / left or right whitespace
     • string.count(substring) Returns the number of times substring is present in the string
@@ -82,7 +83,7 @@ string centered in that many spaces
 
 
 
-Old string formatting (Optional)
+# Old string formatting (Optional)
 The format() method was introduced in Python 2.6. Before that, the % (modulo) operator could be used to get a similar result. While this method is no longer recommended for new code, you might come across it in someone else's code. This is what it looks like:
 "base string with %s placeholder" % variable
 The % (modulo) operator returns a copy of the string where the placeholders indicated by %  followed by a formatting expression are replaced by the variables after the operator.
@@ -110,17 +111,24 @@ Check out the official documentation for f-strings.
 
 
 
-enumerate()
+# enumerate()
 
 f you want to access the elements in a list, along with the index of the element in question? You can do this using the enumerate() function. The enumerate() function takes a list as a parameter and returns a tuple for each element in the list. The first value of the tuple is the index and the second value is the element itself.
 
 
-list comprehension
+# list comprehension
 You can also use conditionals with list comprehensions to build even more complex and powerful statements. You can do this by appending an if statement to the end of the comprehension. For example, [ x for x in range(1,101) if x % 10 == 0 ] would generate a list containing all the integers divisible by 10 from 1 to 100. The if statement we added here evaluates each value in the range from 1 to 100 to check if it’s evenly divisible by 10. If it is, it gets added to the list.
 
 
 
-Lists and Tuples Operations Cheat Sheet
+
+
+
+
+
+# Lists and Tuples Operations Cheat Sheet
+
+
 Lists and tuples are both sequences, so they share a number of sequence operations. But, because lists are mutable, there are also a number of methods specific just to lists. This cheat sheet gives you a run down of the common operations first, and the list-specific operations second.
 Common sequence operations
     • len(sequence) Returns the length of the sequence
@@ -150,7 +158,14 @@ List comprehension
 
 
 
-Dictionary Methods Cheat Sheet
+
+
+
+
+
+# Dictionary Methods Cheat Sheet  
+
+
 Definition
 x = {key1:value1, key2:value2}
 Operations
@@ -170,7 +185,9 @@ Methods
 Check out the official documentation for dictionary operations and methods.
 
 
-OOP :
+
+
+## OOP :
 
 In object-oriented programming, concepts are modeled as classes and objects. An idea is defined using a class, and an instance of this class is called an object. Almost everything in Python is an object, including strings, lists, dictionaries, and numbers. When we create a list in Python, we’re creating an object which is an instance of the list class, which represents the concept of a list. Classes also have attributes and methods associated with them. Attributes are the characteristics of the class, while methods are functions that are part of the class.
 
@@ -180,8 +197,9 @@ In object-oriented programming, concepts are modeled as classes and objects. An 
 
 
 
-DOCSTRING :
-
+# DOCSTRING :
+ 
+ 
 >>> class Apple:
 ...     def __init__(self, color, flavor):
 ...         self.color = color
@@ -220,7 +238,13 @@ class Apple(builtins.object)
 
 
 
-Classes and Methods Cheat Sheet
+
+
+
+
+# Classes and Methods Cheat Sheet  
+
+
 In the past few videos, we’ve seen how to define classes and methods in Python. Here, you’ll find a run-down of everything we’ve covered, so you can refer to it whenever you need a refresher.
 Defining classes and methods
 
@@ -253,7 +277,7 @@ def function_name(parameters):
     body_of_function
 
 
-Inheritage:
+# Inheritage:
 
 
 >>> class Animal:
@@ -294,7 +318,7 @@ In this code, we've defined a general class called animal, which has an attribut
 
 
 
-OBJECT COMPOSITION:
+# OBJECT COMPOSITION:
 
 You can have a situation where two different classes are related, but there is no inheritance going on. This is referred to as composition -- where one class makes use of code contained in another class. For example, imagine we have a Package class which represents a software package. It contains attributes about the software package, like name, version, and size. We also have a Repository class which represents all the packages available for installation. While there’s no inheritance relationship between the two classes, they are related. The Repository class will contain a dictionary or list of Packages that are contained in the repository. Let's take a look at an example Repository class definition:
 
@@ -311,7 +335,11 @@ You can have a situation where two different classes are related, but there is n
 
 
 
-Project goal 
+
+
+
+# Project goal  
+
 Create a dictionary with words and word frequencies that can be passed to the generate_from_frequencies function of the WordCloud class.
 Once you have the dictionary, use this code to generate the word cloud image:
 
